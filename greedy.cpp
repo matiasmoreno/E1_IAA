@@ -15,7 +15,19 @@ int main()
 	string line;
 	string word;
 
-	int nFarms, nTrucks, minPrize, i, j;
+	int nFarms, nTrucks, minPrize, i, j, origin;
+
+	// Obtener nodo origin
+
+	while (inFile >> word)
+	{
+		if (word == "-")
+		{
+			inFile >> word;
+			origin = stoi(word);
+			break;
+		}
+	}
 
 	// Obtener tamaño de arreglos
 
@@ -154,22 +166,35 @@ int main()
 			}
 		}
 	}
-	cout << cost[38][39] << endl;
-	cout << cost[38][40] << endl;
-	cout << cost[39][39] << endl;
-	cout << cost[39][40] << endl;
-	cout << cost[40][39] << endl;
-	cout << cost[40][40] << endl;
 
 	inFile.close();
 
 	// Sets de rutas dinamicos: vector de vectores? arreglo de vectores?
 
+	// Crear 3 vectores dinamicos para generar las rutas
+
+	cout << "Numero de camiones: " << nTrucks << endl;
+	vector <int> routes[nTrucks];
+	routes[0].push_back(origin);
+    routes[1].push_back(origin);
+    routes[2].push_back(origin);
+
 	// Función para añadir optimo local a las rutas dinamicas
 
 	// Repetir Función hasta alcanzar minimo de producción
 
+	// Volver a la planta
+
+	routes[0].push_back(origin);
+    routes[1].push_back(origin);
+    routes[2].push_back(origin);
+	cout << routes[0][0];
+
 	// Printear solución y costo asociado
+
+	// Print de vicente
+	// función de evaluación, total de leche recolectado, cantidad de rutas
+	// rutas, distancia recorrida, leche recogida
 
 	return 0;
 }
