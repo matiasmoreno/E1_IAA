@@ -7,6 +7,10 @@
 
 using namespace std;
 
+void suma(int& a){
+    a = 3;
+}
+
 int main()
 {
     vector<int> vect;
@@ -21,7 +25,7 @@ int main()
 
     vector <int> rutas[3];
     rutas[0].push_back(0);
-    rutas[0].push_back(1);
+/*      rutas[0].push_back(1);
     rutas[1].push_back(10);
     rutas[1].push_back(11);
     rutas[2].push_back(20);
@@ -31,6 +35,10 @@ int main()
     cout << "Posicion rutas[2][0]: " << rutas[2][0] << endl;
     cout << "Posicion rutas[0][1]: " << rutas[0][1] << endl;
     cout << "Posicion rutas[1][1]: " << rutas[1][1] << endl;
-    cout << "Posicion rutas[2][1]: " << rutas[2][1] << endl;
+    cout << "Posicion rutas[2][1]: " << rutas[2][1] << endl; */
+    cout << "Tamano vector: " << rutas[0].size() << endl;
+    int i = 0;
+    suma(i);
+    cout << "i : " << i << endl;
     return 0;
 }
