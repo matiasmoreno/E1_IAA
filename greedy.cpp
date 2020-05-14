@@ -33,6 +33,8 @@ void miope(int& bestTruck, int& bestFarm, int capacity[], int position[], int pr
 
 int main()
 {
+	ofstream summary;
+	summary.open ("outputs/summary.txt");
 	int in;
 	for (in = 1; in < 23; in++){
 
@@ -327,7 +329,9 @@ int main()
 		std::chrono::duration<double> elapsed = finish - start;
 		// std::cout << "Elapsed time: " << elapsed.count() << " s\n";
 		outFile << "Elapsed time: " << elapsed.count() << " s\n";
+		summary << instance << " " << nFarms << " " << nTrucks << " " << costRoutes << " " << elapsed.count() << endl; 
 		outFile.close();
 	}
+	summary.close();
 	return 0;
 }

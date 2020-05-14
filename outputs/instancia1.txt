@@ -2,4 +2,4 @@
 Truck 1 80-29-20-80 150 16094
 Truck 2 80-27-80 42 10959
 Truck 3 80-32-3-80 192 13973
-Elapsed time: 0.000997 s
+Elapsed time: 0.001992 s
