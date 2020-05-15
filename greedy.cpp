@@ -68,7 +68,7 @@ int main()
         p = param * 0.1;
 
         ofstream summary;
-        summary.open ("outputsImproved/summary" + to_string(param) + ".txt");
+        summary.open ("outputs/summary" + to_string(param) + ".txt");
         int in;
         for (in = 1; in < 23; in++){
             // Record start time
