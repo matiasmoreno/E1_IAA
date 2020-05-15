@@ -299,7 +299,7 @@ int main()
                 distance = 0;
                 if (routes[i].size() != 0)
                 {
-                    for (j = 0; j < routes[i].size() - 1; j++)
+                    for (j = 0; j < int(routes[i].size() - 1); j++)
                     {
                         if (routes[i][j] == origin)
                         {
@@ -338,7 +338,7 @@ int main()
                 {	
                     // cout << "Truck " << i << " ";
                     outFile << "Truck " << i << " ";
-                    for (j = 0; j < routes[i].size() - 1; j++)
+                    for (j = 0; j < int(routes[i].size() - 1); j++)
                     {
                         if (routes[i][j] == origin)
                         {
